@@ -13,7 +13,7 @@ abstract class AbstractFilteredFieldsGenerator
 
 adding extra functionality and the same time it should provide the same signature for concrete implementation. What does it mean?
 
-These generators help to generate code for a specific class using reflection. Therefore the input information they work on is a `Class` object. The fields generator class has an abstract method `process()`, which is invoked for every field. It is invoked from an implemented method that loops over the fields and does the invocation separately for each. When a concrete class `extends AbstractFieldsGenerator` and thus implements this abstract method then it will be called. When the same concrete class is changed so that it `extends AbstractFilteredFieldsGenerator` then the concrete method will be invoked only for the filtered method. I wanted a design so that the ONLY change that was needed in the concrete class is to change the name.
+These generators help to generate code for a specific class using reflection. Therefore the input information they work on is a `Class` object. The fields generator class has an abstract method `process()`, which is invoked for every field. It is invoked from an implemented method that loops over the fields and does the invocation separately for each. When a concrete class `extends AbstractFieldsGenerator` and thus implements this abstract method then it will be called. When the same concrete class is changed so that it `extends AbstractFilteredFieldsGenerator` then the concrete method will be invoked only for the filtered fields. I wanted a design so that the ONLY change that was needed in the concrete class is to change the name.
 
 # Abstract <del datetime="2019-06-05T06:54:33+00:00">class</del> problem definition
 
